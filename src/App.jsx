@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
+import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import MovieList from './components/MovieList/MovieList';
 
 const App = () => {
-  const [movie, setMovie] = useState([]);
-  const [favorites, setFavorites] = useState([]);
-
   return (
-    < >
-
-    </>
+    <div className='app'>
+      <Navbar/>
+      <MovieList/>
+      
+    </div>
   )
 }
 
