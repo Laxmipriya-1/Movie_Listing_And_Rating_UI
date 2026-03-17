@@ -1,30 +1,35 @@
-.movie_list_header{
-    padding:10px 30px;
+/* Header */
+.movie_list_header {
+    padding: 10px 30px;
     justify-content: space-between;
     margin-bottom: 5px;
+    flex-wrap: wrap; /* allows wrapping */
 }
 
-.movie_list_heading{
+/* Heading */
+.movie_list_heading {
     font-size: 26px;
     color: #ffe400;
 }
 
-.movie_filter{
+/* Filter */
+.movie_filter {
     list-style: none;
     font-size: 16px;
 }
 
-.movie_filter_item{
+.movie_filter_item {
     padding: 5px 10px;
     cursor: pointer;
 }
 
-.movie_filter_item.active{
-    border-bottom:1px solid #e6e6e6;
+.movie_filter_item.active {
+    border-bottom: 1px solid #e6e6e6;
     font-weight: 500;
 }
 
-.movie_sorting{
+/* Sorting */
+.movie_sorting {
     border: none;
     outline: none;
     border-radius: 5px;
@@ -36,8 +41,88 @@
     margin: 0 10px;
 }
 
-.movie_cards{
+.movie_sorting option {
+    color: black;
+}
+
+/* Cards */
+.movie_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .movie_list_header {
+        padding: 10px 20px;
+    }
+
+    .movie_list_heading {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .movie_list_fs {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .movie_sorting {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .movie_cards {
+        justify-content: center;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .movie_list_header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .movie_list_heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .movie_list_fs {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .movie_sorting {
+        width: 100%;
+        margin: 5px 0;
+        height: 35px;
+    }
+
+    .movie_filter {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .movie_filter_item {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .movie_cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
 }
